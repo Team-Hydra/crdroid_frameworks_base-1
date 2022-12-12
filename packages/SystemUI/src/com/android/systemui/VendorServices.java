@@ -47,6 +47,7 @@ public class VendorServices extends CoreStartable {
     private final ArrayList<Object> mServices = new ArrayList<>();
     private final AlarmManager mAlarmManager;
 
+    @Inject
     public VendorServices(Context context, AlarmManager alarmManager, CentralSurfaces centralSurfaces) {
         super(context);
         mAlarmManager = alarmManager;
@@ -68,7 +69,7 @@ public class VendorServices extends CoreStartable {
             }
         }
     }
-    
+
     private void addService(Object obj) {
         if (obj != null) {
             mServices.add(obj);
